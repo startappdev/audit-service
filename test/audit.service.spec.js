@@ -127,7 +127,6 @@ describe('Audit Service Unit-Test', function(){
 
         it ('should test update operation', function(done){
             Audit.prototype.save = function(callback){
-                console.log(this);
                 expect(this.oldObject.id).toEqual(1234);
                 expect(this.oldObject.NEW_OBJECT).toEqual('OLD_OBJECT');
                 expect(this.newObject.id).toEqual(1234);
