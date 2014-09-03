@@ -42,5 +42,11 @@ describe('Memory Interface Unit-Test', function(){
 
             expect(currentModule.set.calledWith('key', 'value', done)).toBeTruthy();
         });
+
+        it ('should verify optional done method', function(){
+            memory.set('key', 'value');
+
+            expect(currentModule.set.calledWith('key', 'value', sinon.match.func)).toBeTruthy();
+        });
     });
 });
