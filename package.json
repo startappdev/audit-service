@@ -2,7 +2,7 @@
   "name": "audit-service",
   "version": "0.0.0",
   "description": "Audit Service",
-  "main": "./lib/express-session-context",
+  "main": "./lib/audit-service",
   "author": "Yarin Podoler",
   "scripts": {
     "test": "jasmine-node --verbose test/"
