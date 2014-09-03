@@ -25,7 +25,8 @@ describe('Audit Service Unit-Test', function(){
                 field3 : {
 
                 }
-            }
+            },
+            post : function(){}
         };
     });
 
