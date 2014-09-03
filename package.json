@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "jasmine-node": "^1.14.5",
+    "mongoose": "^3.8.15",
     "rewire": "^2.1.0",
     "sinon": "^1.10.3",
     "winston": "^0.7.3"
