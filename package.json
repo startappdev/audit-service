@@ -1,0 +1,23 @@
+{
+  "name": "audit-service",
+  "version": "0.0.0",
+  "description": "Audit Service",
+  "main": "./lib/express-session-context",
+  "author": "Yarin Podoler",
+  "scripts": {
+      "test" : "jasmine-node --verbose test/"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/startappdev/audit-service.git"
+  },
+  "bin": {
+    "uppercaseme": "./bin/express-session-context"
+  },
+  "dependencies": {
+    "jasmine-node": "^1.14.5"
+  }
+}
