@@ -2,7 +2,7 @@
   "name": "audit-service",
   "version": "0.0.0",
   "description": "Audit Service",
-  "main": "./lib/audit-service",
+  "main": "./lib/index.js",
   "author": "Yarin Podoler",
   "scripts": {
     "test": "jasmine-node --verbose test/"
@@ -15,7 +15,7 @@
     "url": "https://github.com/startappdev/audit-service.git"
   },
   "bin": {
-    "uppercaseme": "./bin/express-session-context"
+    "uppercaseme": "./bin/audit-service"
   },
   "dependencies": {
     "jasmine-node": "^1.14.5",
