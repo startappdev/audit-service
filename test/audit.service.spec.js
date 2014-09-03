@@ -151,5 +151,31 @@ describe('Audit Service Unit-Test', function(){
 
             schema._event.save(obj);
         });
+
+        it ('should test update operation with no change', function(done){
+            Audit.prototype.save = function(callback){
+                // This is a fail!!!
+                expect(false).toBeTruthy();
+
+                callback(null);
+                done();
+            };
+
+            var obj = {
+                id : 1234,
+                NEW_OBJECT : 'OLD_OBJECT',
+                toObject : function(){
+                    return this;
+                }
+            };
+
+            schema._event.init(obj);
+
+            schema._event.save(obj);
+
+            setTimeout(function(){
+                done();
+            }, 1000);
+        });
     });
 });
