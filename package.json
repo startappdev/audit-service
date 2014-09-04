@@ -1,6 +1,6 @@
 {
   "name": "audit-service",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Audit Service",
   "main": "./lib/index.js",
   "author": "Yarin Podoler",
