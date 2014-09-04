@@ -4,14 +4,11 @@ describe('Audit Service Unit-Test', function(){
     var audit,
         schema,
         Audit,
-        sinon = require('sinon'),
         rewire = require('rewire'),
         String = require('../../lib/data/string.data.js');
 
 
     beforeEach(function(){
-        require('../../lib/init');
-
         audit = rewire('../../lib/service/audit.service');
 
         // Mock the Schema
