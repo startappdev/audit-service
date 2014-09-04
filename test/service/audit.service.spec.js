@@ -8,6 +8,8 @@ describe('Audit Service Unit-Test', function(){
         rewire = require('rewire'),
         String = require('../../lib/data/string.data.js');
 
+    require('../../lib/index');
+
 
     beforeEach(function(){
         audit = rewire('../../lib/service/audit.service');

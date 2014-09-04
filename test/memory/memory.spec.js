@@ -6,6 +6,8 @@ describe('Memory Interface Unit-Test', function(){
         inMemory = require('../../lib/memory/modules/in.memory'),
         sinon = require('sinon');
 
+    require('../../lib/index');
+
     beforeEach(function(){
         memory = require('../../lib/memory/memory');
     });

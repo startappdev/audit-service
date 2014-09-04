@@ -5,6 +5,8 @@ describe('In-Memory Memory Module Unit-Test', function(){
         memory,
         rewire = require('rewire');
 
+    require('../../../lib/index');
+
     beforeEach(function(){
         inMemory = rewire('../../../lib/memory/modules/in.memory');
 
