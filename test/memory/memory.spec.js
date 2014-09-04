@@ -3,9 +3,12 @@
 describe('Memory Interface Unit-Test', function(){
     var memory,
         currentModule,
+        inMemory = require('../../lib/memory/modules/in.memory'),
         sinon = require('sinon');
 
     beforeEach(function(){
+        require('../../lib/init');
+
         memory = require('../../lib/memory/memory');
     });
 
@@ -47,6 +50,10 @@ describe('Memory Interface Unit-Test', function(){
             memory.set('key', 'value');
 
             expect(currentModule.set.calledWith('key', 'value', sinon.match.func)).toBeTruthy();
+        });
+
+        afterEach(function(){
+            memory.use(inMemory);
         });
     });
 });

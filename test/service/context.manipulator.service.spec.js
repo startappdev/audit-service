@@ -6,6 +6,6 @@ describe('Audit Service Unit-Test', function() {
     require('../../lib/index');
 
     beforeEach(function () {
-        contextManipulatorService = rewire('../lib/service/audit.service');
+        contextManipulatorService = rewire('../../lib/service/audit.service');
     });
 });
