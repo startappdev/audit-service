@@ -16,6 +16,7 @@ describe('Audit Service Unit-Test', function(){
 
         // Mock the Schema
         schema = {
+            methods : {},
             paths : {
                 field1 : {
                     options : {

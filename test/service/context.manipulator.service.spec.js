@@ -35,7 +35,7 @@ describe('Context Manipulator Service Unit-Test', function() {
         var contextManipulator = {
             getRequest : function(){
                 return {
-                    profile : {
+                    user : {
                         userId : 1234
                     }
                 };

@@ -16,20 +16,20 @@ describe('In-Memory Memory Module Unit-Test', function(){
     it ('should test set method', function(done){
         inMemory.set('key', 'value', function(err){
             expect(err).toEqual(null);
-            expect(memory.key).toEqual('value');
+            expect(memory.key.value).toEqual('value');
 
             done();
         });
     });
 
     it ('should test get method', function(done){
-        memory.key = 'value';
+        inMemory.set('key','value', function(){
+            inMemory.get('key', function(err, value){
+                expect(err).toEqual(null);
+                expect(value).toEqual('value');
 
-        inMemory.get('key', function(err, value){
-            expect(err).toEqual(null);
-            expect(value).toEqual('value');
-
-            done();
+                done();
+            });
         });
     });
 });
