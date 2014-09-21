@@ -4,7 +4,6 @@
   "description": "Audit Service",
   "main": "./lib/index.js",
   "author": "Yarin Podoler",
-  "private": true,
   "scripts": {
     "test": "jasmine-node --verbose test/"
   },
