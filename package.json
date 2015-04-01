@@ -15,7 +15,7 @@
     "url": "https://github.com/startappdev/audit-service.git"
   },
   "bin": {
-    "uppercaseme": "./bin/audit-service"
+    "audit-service": "./bin/audit-service"
   },
   "dependencies": {
     "jasmine-node": "^1.14.5",
