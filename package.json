@@ -1,6 +1,6 @@
 {
   "name": "audit-service",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Audit Service",
   "main": "./lib/index.js",
   "author": "Yarin Podoler",
@@ -17,10 +17,12 @@
   "bin": {
     "audit-service": "./bin/audit-service"
   },
+  "peerDependencies":[
+    "mongoose": "~4.2.6",
+    ],
   "dependencies": {
     "jasmine-node": "^1.14.5",
     "lodash": "~3.10.0",
-    "mongoose": "^3.8.15",
     "rewire": "^2.1.0",
     "sinon": "^1.10.3",
     "winston": "^0.7.3"
