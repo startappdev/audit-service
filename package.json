@@ -18,7 +18,7 @@
     "audit-service": "./bin/audit-service"
   },
   "peerDependencies":{
-    "mongoose": "~4.2.6"
+    "mongoose": "^4.2.6"
 },
   "dependencies": {
     "jasmine-node": "^1.14.5",
