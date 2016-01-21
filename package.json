@@ -14,11 +14,8 @@
     "type": "git",
     "url": "https://github.com/startappdev/audit-service.git"
   },
-  "bin": {
-    "audit-service": "./bin/audit-service"
-  },
   "peerDependencies":{
-    "mongoose": "^4.2.6"
+    "mongoose": "*"
 },
   "dependencies": {
     "jasmine-node": "^1.14.5",
