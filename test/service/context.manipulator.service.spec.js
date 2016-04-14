@@ -37,7 +37,8 @@ describe('Context Manipulator Service Unit-Test', function() {
                 return {
                     user : {
                         userId : 1234
-                    }
+                    },
+                    headers: {}
                 };
             },
             addData : sinon.stub()
@@ -48,6 +49,42 @@ describe('Context Manipulator Service Unit-Test', function() {
         contextService._callback(contextManipulator, function(){
             expect(contextManipulator.addData.calledWith({
                 userId : 1234
+            })).toBeTruthy();
+
+            done();
+        });
+    });
+
+    it ('should test that additional data from header being added to context manipulator', function(done){
+        contextService = {
+            _callback : null,
+            addContextManipulator : function(callback){
+                contextService._callback = callback;
+                return 1234;
+            }
+        };
+
+        var contextManipulator = {
+            getRequest : function(){
+                return {
+                    user : {
+                        userId : 1234
+                    },
+                    headers: {
+                        isconnectedas: 'true',
+                        ismanaged: 'false'
+                    }
+                };
+            },
+            addData : sinon.stub()
+        };
+
+        contextManipulatorService.addContextManipulator(contextService);
+
+        contextService._callback(contextManipulator, function(){
+            expect(contextManipulator.addData.calledWith({
+                userId : 1234,
+                isConnectedAs: true
             })).toBeTruthy();
 
             done();
