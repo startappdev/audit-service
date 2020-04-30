@@ -5,7 +5,9 @@
   "main": "./lib/index.js",
   "author": "Yarin Podoler",
   "scripts": {
-    "test": "jasmine-node --verbose test/"
+    "test": "jasmine-node --verbose test/",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": "*"
@@ -23,6 +25,8 @@
     "lodash.isequal": "^4.5.0",
     "rewire": "^2.1.0",
     "sinon": "^1.10.3",
-    "winston": "2.2.0"
-  }
+    "winston": "2.2.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
